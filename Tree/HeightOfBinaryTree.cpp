@@ -49,6 +49,6 @@ int main()
     node *root = NULL;
     buildTree(root);
     cout << "Height of Binary Tree is : "<<heightOfTree(root) << endl;
-    ;
+    
     return 0;
 }
