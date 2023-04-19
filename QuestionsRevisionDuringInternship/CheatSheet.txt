@@ -1,0 +1,6 @@
+1. kadane algorithum
+2. sqrt of (x)
+3. SubarraySum
+4. Trapping Water
+5. Product Array except self
+6. Max Consecutive Ones
