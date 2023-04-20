@@ -4,3 +4,4 @@
 4. Trapping Water
 5. Product Array except self
 6. Max Consecutive Ones
+7. Array Partition
