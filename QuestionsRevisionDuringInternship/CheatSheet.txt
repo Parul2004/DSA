@@ -5,3 +5,4 @@
 5. Product Array except self
 6. Max Consecutive Ones
 7. Array Partition
+8. Reshape Matrix
