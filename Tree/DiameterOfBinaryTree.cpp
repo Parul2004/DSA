@@ -32,6 +32,10 @@ node *buildTree(node *&root)
     return root;
 }
 
+
+/*
+
+
 int height(node *&root)
 {
     if (root == NULL)
@@ -62,12 +66,39 @@ int diameter(node *&root, int d)
 
     return d;
 }
+
+*/
+
+int height(node *root, int &diameter)
+{
+    if (root == NULL)
+        return 0;
+    int lh = height(root->left, diameter);
+    int rh = height(root->right, diameter);
+
+    diameter = max(diameter, lh + rh + 1);
+
+    return 1 + max(lh, rh);
+}
+int diameter(node *root)
+{
+    int diameter = 0;
+    height(root, diameter);
+    return diameter;
+}
 int main()
 {
 
     node *root = NULL;
-   root = buildTree(root);
-    int d = 0;
-    cout << diameter(root, d) << endl;
+    root = buildTree(root);
+    
+    /*
+
+     int d = 0;
+     cout << diameter(root, d) << endl;
+
+     */
+
+    cout << diameter(root) << endl;
     return 0;
 }
