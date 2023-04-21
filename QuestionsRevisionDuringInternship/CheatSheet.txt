@@ -6,3 +6,4 @@
 6. Max Consecutive Ones
 7. Array Partition
 8. Reshape Matrix
+9. Maximum Product of Three Numbers
