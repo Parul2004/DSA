@@ -11,7 +11,7 @@ void merge(int arr1[], int arr2[], int n, int m)
 
         while (j < (n + m))
         {
-            if (j < n && i < n && arr1[i] > arr2[i])
+            if (j < n && i < n && arr1[i] > arr1[j])
             {
                 swap(arr1[i], arr1[j]);
             }
@@ -36,10 +36,10 @@ int main()
 {
     // Time Complexity is O(n*m);
     // Space Complexity is O(1)
-    int arr1[] = {1, 4, 7, 8, 10};
-    int arr2[] = {2, 3, 9};
+    int arr1[] = {1,2,3};
+    int arr2[] = {2, 5, 6};
     cout << "Before merge:" << endl;
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 3; i++)
     {
         cout << arr1[i] << " ";
     }
@@ -49,9 +49,9 @@ int main()
     }
 
     cout << endl;
-    merge(arr1, arr2, 5, 3);
+    merge(arr1, arr2, 3, 3);
     cout << "After merge:" << endl;
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 3; i++)
     {
         cout << arr1[i] << " ";
     }
