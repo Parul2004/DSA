@@ -1,58 +1,81 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool allEqual(string s)
+
+   class List {
+      public:
+          int data;
+          List *next;
+
+          List(int val) {
+              this->data = val;
+              next = NULL;
+          }
+          ~List() {
+              if (next != NULL) {
+                  delete next;
+              }
+          }
+   };
+List *foldAndMerge(List *head)
 {
-    int arr[26] = {0};
-    for (int i = 0; i < s.length(); i++)
+    if (head == NULL)
     {
-        arr[s[i] - 'a']++;
+        return head;
     }
-    int maxi = INT_MIN;
-    for (int i = 0; i < 26; i++)
+    // Write your code here.
+    List *slow = head;
+    List *fast = head;
+    while (fast->next != NULL && fast->next->next != NULL)
     {
-        if (arr[i] > maxi)
-        {
-            maxi = arr[i];
-        }
+        slow = slow->next;
+        fast = fast->next->next;
     }
+    fast = slow->next;
+    slow->next = NULL;
+    slow = head;
 
-    int mini = INT_MAX;
-    for (int i = 0; i < 26; i++)
+    vector<int> vectt;
+    int i = -1;
+    while (slow != NULL)
     {
-        if (arr[i] < mini && arr[i]!=0)
-        {
-            mini = arr[i];
-        }
+        vectt.push_back(slow->data);
+        slow = slow->next;
+        i++;
     }
-    // cout << maxi << " " << mini << endl;
-
-    if (mini == maxi)
-        return true;
-    int c = 0;
-    for(int i = 0;i<26;i++){
-        if(maxi == arr[i]){
-            c++;
-        }
+    List *temp = fast;
+    while (temp != NULL)
+    {
+        temp->data = (vectt[i--]) * (temp->data);
+        temp = temp->next;
     }
-    if(c>1) return false;
-    else if(c==1 && maxi-mini==1) return true;
-    
-    if (maxi - mini > 1)
-        return false;
-    else return true;
-    return true;
+    return fast;
+}
+void printLinkedList(List *&head)
+{
+    List *tmp = head;
+    while (tmp != NULL)
+    {
+        cout << tmp->data << " ";
+        tmp = tmp->next;
+    }
+    cout << "\n";
 }
 int main()
 {
-    string s;
-    cin >> s;
-    bool f = allEqual(s);
-    if(f){
-        cout<<"YES";
-    }
-    else{
-        cout<<"NO";
-    }
-  
-  return 0;
+    List *head1 = new List(2);
+    List *head2 = new List(2);
+    List *head3 = new List(2);
+    List *head4 = new List(2);
+    // List *head5 = new List(2);
+    // List *head6 = new List(6);
+    head1->next = head2;
+    head2->next = head3;
+    head3->next = head4;
+    head4->next = NULL;
+    // head5->next = head6;
+    // head6->next = NULL;
+
+    head1 = foldAndMerge(head1);
+    printLinkedList(head1);
+    return 0;
 }
