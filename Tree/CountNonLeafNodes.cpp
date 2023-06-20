@@ -14,7 +14,7 @@ public:
         this->right = NULL;
     }
 };
-node *formTree(node *root)
+node *formTree(node *&root)
 {
 
     cout << "Enter the node's value\n";
@@ -34,16 +34,34 @@ node *formTree(node *root)
 
     return root;
 }
-node *build(node *root){
-    
-}
-int main()
+
+void getNodes(node *root, int &c)
 {
 
-    node *root = NULL;
-  
-    vector<int>v = {};
-    root = build(root);
+    if (root == NULL)
+        return;
+    if (root->left == NULL && root->right == NULL)
+    {
+    }
+    else
+        c++;
+    getNodes(root->left, c);
+    getNodes(root->right, c);
+}
+int countNonLeafNodes(node *root)
+{
+    // Code here
+    if (root == NULL)
+        return 0;
+    int c = 0;
+    getNodes(root, c);
+    return c;
+}
 
+int main()
+{
+    node *root = NULL;
+    root = formTree(root);
+    cout << "Number of non-leaf nodes are : " << countNonLeafNodes(root) << endl;
     return 0;
 }
