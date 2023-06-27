@@ -8,8 +8,10 @@ int kthSmallestElement(int arr[], int k,int n)
     }
     int i = 1;
     while(i<k){
+
         maxQueue.pop();
         i++;
+        
     }
     return maxQueue.top();
 }
