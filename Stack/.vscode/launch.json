@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "InfixToPostFix",
+      "request": "launch",
+      "mainClass": "InfixToPostFix",
+      "projectName": "Stack_9d78787a"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",

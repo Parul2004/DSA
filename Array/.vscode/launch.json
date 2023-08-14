@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "PlusOne",
+      "request": "launch",
+      "mainClass": "PlusOne",
+      "projectName": "Array_9c7a284b"
+    },
+    {
+      "type": "java",
       "name": "FirstNegativeIntegerInEveryWindowOfSizeK",
       "request": "launch",
       "mainClass": "FirstNegativeIntegerInEveryWindowOfSizeK",
