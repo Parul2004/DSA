@@ -2,6 +2,41 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "PrintNTo1ByBackTracking",
+      "request": "launch",
+      "mainClass": "PrintNTo1ByBackTracking",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
+      "name": "Print1ToNByBackTracking",
+      "request": "launch",
+      "mainClass": "Print1ToNByBackTracking",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
+      "name": "PrintNTo1",
+      "request": "launch",
+      "mainClass": "PrintNTo1",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
+      "name": "PrintLinearlyFrom1ToN",
+      "request": "launch",
+      "mainClass": "PrintLinearlyFrom1ToN",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
+      "name": "PrintName5Times",
+      "request": "launch",
+      "mainClass": "PrintName5Times",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
