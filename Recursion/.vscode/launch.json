@@ -3,6 +3,62 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CountTheSubSequencesWhoseSumK",
+      "request": "launch",
+      "mainClass": "CountTheSubSequencesWhoseSumK",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
+      "name": "PrintAny1SubsequenceWhoseSumK",
+      "request": "launch",
+      "mainClass": "PrintAny1SubsequenceWhoseSumK",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
+      "name": "PrintingSubsequencesWhoseSumIsK",
+      "request": "launch",
+      "mainClass": "PrintingSubsequencesWhoseSumIsK",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
+      "name": "PrintSubsequencesOfArray",
+      "request": "launch",
+      "mainClass": "PrintSubsequencesOfArray",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
+      "name": "CheckIfStringPalindromeUsingRecursion",
+      "request": "launch",
+      "mainClass": "CheckIfStringPalindromeUsingRecursion",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
+      "name": "ReverseAnArrayUsingRecursion",
+      "request": "launch",
+      "mainClass": "ReverseAnArrayUsingRecursion",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
+      "name": "FibonacciNumbers",
+      "request": "launch",
+      "mainClass": "FibonacciNumbers",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
+      "name": "SumOfNaturalNumber",
+      "request": "launch",
+      "mainClass": "SumOfNaturalNumber",
+      "projectName": "Recursion_a1d9d054"
+    },
+    {
+      "type": "java",
       "name": "PrintNTo1ByBackTracking",
       "request": "launch",
       "mainClass": "PrintNTo1ByBackTracking",
